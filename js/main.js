@@ -11,6 +11,15 @@ botao.addEventListener('click', (evento) =>{
 
 function random(){
     randominputInt = parseInt(input.value)
+
+    if (randominputInt < 0 || randominputInt > 100){
+        texto.innerHTML = `Insira um valor entre 1 e 100`;
+    }
+
+    if(isNaN(randominputInt)){
+        texto.innerHTML = `Insira um valor numérico válido`;
+    }
+
     if (input.value < numRandom){
         texto.innerHTML = "O numero é maior";
     } else if (input.value > numRandom){
