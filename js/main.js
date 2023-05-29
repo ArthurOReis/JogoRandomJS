@@ -13,7 +13,7 @@ function random(){
     randominputInt = parseInt(input.value)
 
     if (randominputInt < 0 || randominputInt > 100){
-        texto.innerHTML = `Insira um valor entre 1 e 100`;
+        texto.innerHTML = `Insira um valor entre 0 e 100`;
     }
 
     if(isNaN(randominputInt)){
@@ -28,6 +28,9 @@ function random(){
 
     if (randominputInt === numRandom){
         texto.innerHTML = `Parabéns! você acertou, o valor era ${numRandom}!`;
-        console.log(typeof(input.value));
+        botao.innerText = "JOGAR NOVAMENTE";
+        botao.addEventListener('click', (evento) =>{
+            window.location.reload(true);
+        })
     }
 }
